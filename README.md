@@ -143,6 +143,8 @@ processors work just fine (even for macOS Sonoma).
   Note: Modern NVIDIA GPUs are supported on HighSierra but not on later
   versions of macOS.
 
+  Note 2: Use https://github.com/corpnewt/gibMacOS to download macOS Sequoia.
+
 * Convert the downloaded `BaseSystem.dmg` file into the `BaseSystem.img` file.
 
   ```
