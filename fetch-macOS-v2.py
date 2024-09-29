@@ -234,7 +234,7 @@ def save_image(url, sess, filename='', directory=''):
                 break
             fh.write(chunk)
             size += len(chunk)
-            terminalsize = max(os.get_terminal_size().columns - TERMINAL_MARGIN, 0)
+            terminalsize = max(225 - TERMINAL_MARGIN, 0)
             if oldterminalsize != terminalsize:
                 print(f'\r{"":<{terminalsize}}', end='')
                 oldterminalsize = terminalsize
@@ -259,7 +259,7 @@ def verify_image(dmgpath, cnkpath):
 
     with open(dmgpath, 'rb') as dmgf:
         for cnkcount, (cnksize, cnkhash) in enumerate(verify_chunklist(cnkpath), 1):
-            terminalsize = max(os.get_terminal_size().columns - TERMINAL_MARGIN, 0)
+            terminalsize = max(225 - TERMINAL_MARGIN, 0)
             print(f'\r{f"Chunk {cnkcount} ({cnksize} bytes)":<{terminalsize}}', end='')
             sys.stdout.flush()
             cnk = dmgf.read(cnksize)
